@@ -416,8 +416,8 @@ class S3(object):
             content_type = content_type + "; charset=" + content_encoding
 
         headers["content-type"] = content_type
-        if content_encoding is not None:
-            headers["content-encoding"] = content_encoding
+        #if content_encoding is not None:
+        #    headers["content-encoding"] = content_encoding
 
         ## Other Amazon S3 attributes
         if self.config.acl_public:
