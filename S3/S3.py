@@ -607,6 +607,7 @@ class S3(object):
             elif (o == 0x20 or  # Space and below
                 o == 0x22 or    # "
                 o == 0x27 or    # '
+		o == 0x3A or	# :
                 o == 0x23 or    # #
                 o == 0x25 or    # % (escape character)
                 o == 0x26 or    # &
