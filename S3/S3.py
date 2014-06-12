@@ -618,6 +618,8 @@ class S3(object):
                 o == 0x60 or    # `
                 o == 0x28 or    # (
                 o == 0x29 or    # )
+                o == 0x5B or    # [
+                o == 0x5D or    # ]
                 o == 0x2C or    # ,
                 o >= 123):      # { and above, including >= 128 for UTF-8
                 encoded += "%%%02X" % o
