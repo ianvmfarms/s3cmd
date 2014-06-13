@@ -615,6 +615,7 @@ class S3(object):
                 o == 0x3C or    # <
                 o == 0x3E or    # >
                 o == 0x3F or    # ?
+		o == 0x21 or	# !
                 o == 0x60 or    # `
                 o == 0x28 or    # (
                 o == 0x29 or    # )
