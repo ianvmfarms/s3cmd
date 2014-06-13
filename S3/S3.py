@@ -607,7 +607,8 @@ class S3(object):
             elif (o == 0x20 or  # Space and below
                 o == 0x22 or    # "
                 o == 0x27 or    # '
-		o == 0x3A or	# :
+		        o == 0x3A or	# :
+                o == 0x3B or    # ;
                 o == 0x23 or    # #
                 o == 0x25 or    # % (escape character)
                 o == 0x26 or    # &
@@ -615,7 +616,7 @@ class S3(object):
                 o == 0x3C or    # <
                 o == 0x3E or    # >
                 o == 0x3F or    # ?
-		o == 0x21 or	# !
+		        o == 0x21 or	# !
                 o == 0x60 or    # `
                 o == 0x28 or    # (
                 o == 0x29 or    # )
