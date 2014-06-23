@@ -605,25 +605,26 @@ class S3(object):
                     error(u"Please report it to s3tools-bugs@lists.sourceforge.net")
                     encoded += replace_nonprintables(c)
             elif (o == 0x20 or  # Space and below
-                o == 0x22 or    # "
-                o == 0x27 or    # '
+		        o == 0x21 or	# !
 		        o == 0x3A or	# :
-                o == 0x3B or    # ;
+                o == 0x22 or    # "
                 o == 0x23 or    # #
+                o == 0x24 or    # $
                 o == 0x25 or    # % (escape character)
                 o == 0x26 or    # &
-                o == 0x2B or    # + (or it would become <space>)
-                o == 0x3C or    # <
-                o == 0x3E or    # >
-                o == 0x24 or    # $
-                o == 0x3F or    # ?
-		        o == 0x21 or	# !
-                o == 0x60 or    # `
+                o == 0x27 or    # '
                 o == 0x28 or    # (
                 o == 0x29 or    # )
-                o == 0x5B or    # [
-                o == 0x5D or    # ]
+                o == 0x2B or    # + (or it would become <space>)
                 o == 0x2C or    # ,
+                o == 0x3B or    # ;
+                o == 0x3C or    # <
+                o == 0x3E or    # >
+                o == 0x3F or    # ?
+                o == 0x5B or    # [
+                o == 0x5C or    # \
+                o == 0x5D or    # ]
+                o == 0x60 or    # `
                 o >= 123):      # { and above, including >= 128 for UTF-8
                 encoded += "%%%02X" % o
             else:
